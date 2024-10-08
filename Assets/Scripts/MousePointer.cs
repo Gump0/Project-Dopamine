@@ -13,23 +13,26 @@ public class MousePointer : MonoBehaviour
     }
 
     public void OnLeftMouseClick(){
-       RaycastHit click;
-       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+       RaycastHit2D click = Physics2D.Raycast(GetMousePosition(), Vector2.down, Mathf.Infinity);
 
+        switch(click.collider.tag){
+            case "Window":
+            Debug.Log("Clicked Window");
+            windowManager.UpdateFocusedWindow(click.collider.gameObject);
+            break;
 
-    //    if(Physics2D.Raycast(ray, out click)){
-    //     string clickedTag = click.collider.tag;
-    //     Debug.Log(clickedTag);
+            case "Close":
+            Debug.Log("Close Button");
+            break;
 
-    //     // check what object the player left clicked on
-    //     // and execute a specific block of code...
-    //         switch(clickedTag){
-    //             case "Window":
-    //             //yaddayadda
-    //             break;
-    //         }
-    //     }
+            case "Fullscreen/Window":
+            Debug.Log("Fullscreen/Window Button");
+            break;
 
+            case "Minimize":
+            Debug.Log("Minimize Button");
+            break;
+        }
     }
 
         public void OnRightMouseClick(){
@@ -38,6 +41,7 @@ public class MousePointer : MonoBehaviour
 
     private Vector2 GetMousePosition(){
         Vector2 mousePos = Input.mousePosition;
-        return mousePos;
+        Vector2 relativeMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        return relativeMousePos;
     }
 }
