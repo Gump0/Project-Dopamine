@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Window
+  - WindowBar
+  - Close
+  - Fullscreen
+  - Minimize
   layers:
   - Default
   - TransparentFX

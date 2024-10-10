@@ -21,11 +21,16 @@ public class MousePointer : MonoBehaviour
             windowManager.UpdateFocusedWindow(click.collider.gameObject);
             break;
 
+            case "WindowBar":
+            Debug.Log("Dragging window bar");
+            windowManager.UpdateFocusedWindow(click.collider.gameObject);
+            break;
+
             case "Close":
             Debug.Log("Close Button");
             break;
 
-            case "Fullscreen/Window":
+            case "Fullscreen":
             Debug.Log("Fullscreen/Window Button");
             break;
 
