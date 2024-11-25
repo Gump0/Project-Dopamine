@@ -8,13 +8,16 @@ using UnityEngine;
 public class MousePointer : MonoBehaviour
 {
     private WindowManager windowManager;
-    private void Awake(){
-        if(windowManager == null) windowManager = GetComponent<WindowManager>();
+    private WindowFunctions windowFunctions;
+    private void Awake(){ // Grab references
+        if(windowManager == null) 
+            windowManager = GetComponent<WindowManager>();
+        if(windowFunctions == null) 
+            windowFunctions = GetComponent<WindowFunctions>();
     }
 
     public void OnLeftMouseClick(){
        RaycastHit2D click = Physics2D.Raycast(GetMousePosition(), Vector2.down, Mathf.Infinity);
-
         switch(click.collider.tag){
             case "Window":
             Debug.Log("Clicked Window");
@@ -28,6 +31,7 @@ public class MousePointer : MonoBehaviour
 
             case "Close":
             Debug.Log("Close Button");
+            windowFunctions.CloseWindow(click.collider.gameObject);
             break;
 
             case "Fullscreen":
@@ -36,6 +40,11 @@ public class MousePointer : MonoBehaviour
 
             case "Minimize":
             Debug.Log("Minimize Button");
+            windowFunctions.MinimizeToTaskBar(click.collider.gameObject);
+            break;
+
+            case null:
+            Debug.Log("Clicked Desktop");
             break;
         }
     }

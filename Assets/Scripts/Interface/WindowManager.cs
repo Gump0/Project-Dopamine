@@ -6,7 +6,7 @@ using UnityEngine;
 // how a window manager functions within an operating system
 public class WindowManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> windowList = new List<GameObject>();
+    public List<GameObject> windowList = new List<GameObject>();
     [SerializeField] private SpriteRenderer prevWindow;
     protected int index {get; private set;}
 
@@ -33,10 +33,5 @@ public class WindowManager : MonoBehaviour
         SpriteRenderer clickedWindowSR = windowList[0].GetComponent<SpriteRenderer>();
         clickedWindowSR.sortingOrder = 5;
         prevWindow = clickedWindowSR;
-    }
-
-    public void SpawnWindow(GameObject newWindow){
-        windowList.Add(newWindow);
-        Instantiate(newWindow);
     }
 }
