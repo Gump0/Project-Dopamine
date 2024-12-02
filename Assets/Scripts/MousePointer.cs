@@ -17,21 +17,35 @@ public class MousePointer : MonoBehaviour
     }
 
     public void OnLeftMouseClick(){
-       RaycastHit2D click = Physics2D.Raycast(GetMousePosition(), Vector2.down, Mathf.Infinity);
-        switch(click.collider.tag){
+       RaycastHit2D[] clicks = Physics2D.RaycastAll(GetMousePosition(), Vector2.down, Mathf.Infinity); // find every obj in raycast
+        if(clicks.Length == 0)
+            return;
+
+        GameObject topmostWindow = null;
+        int highestSortingOrder = int.MinValue;
+
+       foreach(var click in clicks) { // iterate through each one and find the window with the top-most sorting order :D
+            SpriteRenderer clickSR = click.collider.GetComponent<SpriteRenderer>();
+            if(clickSR != null && clickSR.sortingOrder > highestSortingOrder){
+                topmostWindow = click.collider.gameObject;
+                highestSortingOrder = clickSR.sortingOrder;
+            }
+       }
+
+        switch(topmostWindow.tag) {
             case "Window":
             Debug.Log("Clicked Window");
-            windowManager.UpdateFocusedWindow(click.collider.gameObject);
+            windowManager.UpdateFocusedWindow(topmostWindow);
             break;
 
             case "WindowBar":
             Debug.Log("Dragging window bar");
-            windowManager.UpdateFocusedWindow(click.collider.gameObject);
+            windowManager.UpdateFocusedWindow(topmostWindow);
             break;
 
             case "Close":
             Debug.Log("Close Button");
-            windowFunctions.CloseWindow(click.collider.gameObject);
+            windowFunctions.CloseWindow(topmostWindow);
             break;
 
             case "Fullscreen":
@@ -40,7 +54,7 @@ public class MousePointer : MonoBehaviour
 
             case "Minimize":
             Debug.Log("Minimize Button");
-            windowFunctions.MinimizeToTaskBar(click.collider.gameObject);
+            windowFunctions.MinimizeToTaskBar(topmostWindow);
             break;
 
             case null:
