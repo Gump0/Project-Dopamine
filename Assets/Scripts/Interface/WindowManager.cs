@@ -28,7 +28,7 @@ public class WindowManager : MonoBehaviour
         windowList.Insert(0, clickedWindow);
         UpdateListedSortingOrders();
     }
-    void UpdateListedSortingOrders() {
+    public void UpdateListedSortingOrders() {
         // check list hiearchy and update each window
         // and window component to the correct sorting order :3
         int maxNumberOfChildren = 4; // variable that determines how deep of a sorting order a parent window needs

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 // Script in charge with handling mouse inputs
-// And checkinf if the player clicks a window or  not
+// And checkinf if the player clicks a window or not
 public class MousePointer : MonoBehaviour
 {
     private WindowManager windowManager;
@@ -50,6 +50,7 @@ public class MousePointer : MonoBehaviour
 
             case "Fullscreen":
             Debug.Log("Fullscreen/Window Button");
+            windowFunctions.MinMaxWindow(topmostWindow);
             break;
 
             case "Minimize":

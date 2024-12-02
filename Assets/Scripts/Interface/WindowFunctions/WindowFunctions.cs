@@ -21,6 +21,19 @@ public class WindowFunctions : MonoBehaviour
         Destroy(closingWindow);
     }
 
+    public void MinimizeToTaskBar(GameObject m2tbButton) { 
+        // Method will evenutally handle storing to taskbar
+        // For now this method simply hides the window unsing SetActive()
+        GameObject m2tbWindow = GrabElementWindowParent(m2tbButton);
+        m2tbWindow.SetActive(false); 
+    }
+
+    public void MinMaxWindow(GameObject mmButton) {
+        GameObject mmButtonWindow = GrabElementWindowParent(mmButton);
+        WindowInfo mmWindowWindowInfo = mmButtonWindow.GetComponent<WindowInfo>();
+        mmWindowWindowInfo.MinimizeOrFullescreen(mmButtonWindow); // execute method under WindowInfo.cs
+    }
+
     private GameObject GrabElementWindowParent(GameObject childObj) {
         Transform current = childObj.transform;
         while (current.parent != null) {
@@ -29,12 +42,5 @@ public class WindowFunctions : MonoBehaviour
             current = current.parent;
         }
         return current.gameObject;
-    }
-
-    public void MinimizeToTaskBar(GameObject m2tbButton) { 
-        // Method will evenutally handle storing to taskbar
-        // For now this method simply hides the window unsing SetActive()
-        GameObject m2tbWindow = GrabElementWindowParent(m2tbButton);
-        m2tbWindow.SetActive(false); 
     }
 }
