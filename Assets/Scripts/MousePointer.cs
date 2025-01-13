@@ -7,9 +7,12 @@ using UnityEngine;
 // And checkinf if the player clicks a window or not
 public class MousePointer : MonoBehaviour
 {
+    private TaskBar taskBar;
     private WindowManager windowManager;
     private WindowFunctions windowFunctions;
     private void Awake(){ // Grab references
+        if(taskBar == null)
+            taskBar = GameObject.Find("TaskBar").GetComponent<TaskBar>();
         if(windowManager == null) 
             windowManager = GetComponent<WindowManager>();
         if(windowFunctions == null) 
@@ -56,6 +59,11 @@ public class MousePointer : MonoBehaviour
             case "Minimize":
             Debug.Log("Minimize Button");
             windowFunctions.MinimizeToTaskBar(topmostWindow);
+            break;
+
+            case "TaskBarIcon":
+            Debug.Log("Task Bar Icon");
+            taskBar.OpenTaskTray();
             break;
 
             case null:

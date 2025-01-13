@@ -9,6 +9,7 @@ TagManager:
   - Close
   - Fullscreen
   - Minimize
+  - TaskBarIcon
   layers:
   - Default
   - TransparentFX
