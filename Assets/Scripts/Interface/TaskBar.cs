@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class TaskBar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        // Initialize UI element
     }
+    // Method in charge with opening system tray when called
+    public void OpenTaskTray() {
 
-    // Update is called once per frame
-    void Update()
-    {
+    }
+    // Method in charge with opening the corresponding application
+    // In system tray when called.
+    public void OpenApplication(int index) {
         
     }
 }
