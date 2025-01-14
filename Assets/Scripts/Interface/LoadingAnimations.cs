@@ -6,7 +6,7 @@ public class LoadingAnimations : MonoBehaviour
 {
     public Sprite[] loadingSprites;
     private SpriteRenderer sr;
-    private float elapsedTime, timeInterval = 0.5f;
+    private float elapsedTime, timeInterval = 0.35f;
     private int index = 0;
     
     void Awake() {

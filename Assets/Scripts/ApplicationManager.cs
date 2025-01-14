@@ -19,7 +19,7 @@ public class ApplicationManager : MonoBehaviour
     // From the Desktop scene, including the window open logic.
     public void AnimateWindowOpen(string appName) {
         GameObject openApp = Instantiate(appOpenPrefab);
-        StartCoroutine(AnimateWindow(openApp, "appName"));
+        StartCoroutine(AnimateWindow(openApp, appName));
     }
 
     // Method that grows window before launching the application.
