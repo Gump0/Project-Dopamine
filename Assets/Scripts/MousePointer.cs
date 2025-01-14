@@ -7,6 +7,7 @@ using UnityEngine;
 // And checkinf if the player clicks a window or not
 public class MousePointer : MonoBehaviour
 {
+    private ApplicationManager appMan;
     private TaskBar taskBar;
     private WindowManager windowManager;
     private WindowFunctions windowFunctions;
@@ -66,6 +67,11 @@ public class MousePointer : MonoBehaviour
             taskBar.OpenTaskTray();
             break;
 
+            case "AppClose": // Close button functionality for other scenes
+            Debug.Log("App Close Icon");
+            DesktopSceneSwitch();
+            break;
+
             case null:
             Debug.Log("Clicked Desktop");
             break;
@@ -74,6 +80,14 @@ public class MousePointer : MonoBehaviour
 
         public void OnRightMouseClick(){
         Debug.Log("Right click was clicked!!");
+    }
+
+    private void DesktopSceneSwitch() {
+        appMan = GameObject.Find("ApplicationManager").GetComponent<ApplicationManager>(); // find instance of App manager in scene
+        if(appMan == null) // nullcheck
+            Debug.LogError("MOUSE POINTER CLASS : Application Manager is NULL");
+        
+        appMan.OpenApplication("Desktop"); // call method to return to desktop
     }
 
     private Vector2 GetMousePosition(){

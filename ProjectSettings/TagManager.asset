@@ -10,6 +10,9 @@ TagManager:
   - Fullscreen
   - Minimize
   - TaskBarIcon
+  - Obstacle
+  - Food
+  - AppClose
   layers:
   - Default
   - TransparentFX
