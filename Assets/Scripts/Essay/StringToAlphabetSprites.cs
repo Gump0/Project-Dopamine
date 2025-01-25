@@ -1,0 +1,112 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class StringToAlphabetSprites : MonoBehaviour
+{
+    public string essay;
+    public Sprite[] alphabetSprites;                                // We still need to store a collection of sprites :(
+    public Transform[] letterTransforms;                            // stores the transforms for the word objects
+    [SerializeField] private int charIndex = 0, essayCharCount;
+    [SerializeField] private char currentChar;                                       // the character the player is currently hovering
+    [SerializeField] private float elapsedTime;
+    private Dictionary<char, Sprite> charToSpriteMap;               // Dictionary to store the mapping of chars to sprites
+
+    [SerializeField] private GameObject letterPrefab;
+    [SerializeField] private GameObject[] letterObjects = new GameObject[13];          // Letter Objects
+
+    //[SerializeField] private GameObject[] loadedLetters = new GameObject[12];   
+    
+
+    private void InitDictionary()
+    {
+        charToSpriteMap = new Dictionary<char, Sprite>
+        {   // represents 26 english characters + comma & peroid (28 total)
+            { ',', alphabetSprites[0] },
+            { '.', alphabetSprites[1] },
+            { 'A', alphabetSprites[2] },
+            { 'B', alphabetSprites[3] },
+            { 'C', alphabetSprites[4] },
+            { 'D', alphabetSprites[5] },
+            { 'E', alphabetSprites[6] },
+            { 'F', alphabetSprites[7] },
+            { 'G', alphabetSprites[8] },{ 'g', alphabetSprites[8] },
+            { 'H', alphabetSprites[9] },
+            { 'I', alphabetSprites[10] },
+            { 'J', alphabetSprites[11] },
+            { 'K', alphabetSprites[12] },
+            { 'L', alphabetSprites[13] },
+            { 'M', alphabetSprites[14] },
+            { 'N', alphabetSprites[15] },
+            { 'O', alphabetSprites[16] },
+            { 'P', alphabetSprites[17] },
+            { 'Q', alphabetSprites[18] },
+            { 'R', alphabetSprites[19] },
+            { 'S', alphabetSprites[20] },
+            { 'T', alphabetSprites[21] },
+            { 'U', alphabetSprites[22] },
+            { 'V', alphabetSprites[23] },
+            { 'W', alphabetSprites[24] },
+            { 'X', alphabetSprites[25] },
+            { 'Y', alphabetSprites[26] },
+            { 'Z', alphabetSprites[27] }
+        };
+    }
+
+    void Start() {
+        essayCharCount = essay.Length;
+        InitDictionary();
+        foreach(Transform tr in letterTransforms){
+            CharToSpriteGameObject(currentChar, tr);
+        }
+    }
+
+    void Update() {
+        elapsedTime += Time.deltaTime;
+        if(Input.anyKeyDown) { // check for keyboard inputs
+            string input = Input.inputString;
+
+             if (string.IsNullOrEmpty(input))
+                return;
+            currentChar = input[0]; // store input as char
+            Debug.Log(essay[charIndex]);
+            if(currentChar == essay[charIndex]) { // if pressed char equals current char on-screen...
+                charIndex++;
+                UpdateLetterObjects();
+                elapsedTime = 0;
+            }
+        }
+    }
+
+    void UpdateLetterObjects() {
+        int i = 0;
+        foreach(GameObject go in letterObjects){
+            Transform tr = letterTransforms[i];
+            UpdateEachLetterGameObj(currentChar, tr);
+            i++;
+        }
+    }
+
+    void UpdateEachLetterGameObj(char c, Transform tr) {
+        
+    }
+
+    void CharToSpriteGameObject(char c, Transform tr)
+    {
+        //GameObject prevLetter = null;
+        if (charToSpriteMap.TryGetValue(c, out Sprite sprite)) {
+            //Destroy(prevLetter);
+
+            GameObject letterGameObject = Instantiate(letterPrefab, tr);
+            Debug.Log($"Instantiated object for character: {c}");
+            letterGameObject.name = $"Letter_{c}";
+            LetterData data = letterGameObject.GetComponent<LetterData>();
+            data.UpdateSprite(sprite);
+            data.character = c;
+            //prevLetter = letterGameObject;
+        }
+        else {
+            Debug.LogWarning($"Character '{c}' not found in dictionary.");
+        }
+    }
+}
