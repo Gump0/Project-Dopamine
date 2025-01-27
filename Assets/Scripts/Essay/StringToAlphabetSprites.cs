@@ -2,24 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script in charge with handling essay logic
+// checking if correct inputs are used,
+// and displaying the correct characters the player needs to type
 public class StringToAlphabetSprites : MonoBehaviour
 {
     public string essay;
     public Sprite[] alphabetSprites;                                // We still need to store a collection of sprites :(
     public Transform[] letterTransforms;                            // stores the transforms for the word objects
-    [SerializeField] private int charIndex = 0, essayCharCount;
-    [SerializeField] private char currentChar;                                       // the character the player is currently hovering
-    [SerializeField] private float elapsedTime;
+    public int charIndex = 0, essayCharCount;
+    [SerializeField] private char currentChar;                       // the character the player is currently hovering
     private Dictionary<char, Sprite> charToSpriteMap;               // Dictionary to store the mapping of chars to sprites
 
     [SerializeField] private GameObject letterPrefab;
     [SerializeField] private GameObject[] letterObjects = new GameObject[13];          // Letter Objects
 
-    //[SerializeField] private GameObject[] loadedLetters = new GameObject[12];   
-    
-
-    private void InitDictionary()
-    {
+    private void InitDictionary() {
         charToSpriteMap = new Dictionary<char, Sprite>
         {   // represents 26 english characters + comma & peroid (28 total)
             { ',', alphabetSprites[0] },
@@ -49,20 +47,23 @@ public class StringToAlphabetSprites : MonoBehaviour
             { 'W', alphabetSprites[24] },
             { 'X', alphabetSprites[25] },
             { 'Y', alphabetSprites[26] },
-            { 'Z', alphabetSprites[27] }
+            { 'Z', alphabetSprites[27] },
+            { ' ', null }
         };
     }
 
     void Start() {
         essayCharCount = essay.Length;
         InitDictionary();
-        foreach(Transform tr in letterTransforms){
-            CharToSpriteGameObject(currentChar, tr);
+        for(int i = 0; i < letterTransforms.Length; i++) {
+            CharToSpriteGameObject(i, currentChar);
+            UpdateEachLetterGameObj(i, essay[i + charIndex]);
         }
     }
 
     void Update() {
-        elapsedTime += Time.deltaTime;
+        if(charIndex >= essayCharCount) return; // check if end of essay is reached.
+
         if(Input.anyKeyDown) { // check for keyboard inputs
             string input = Input.inputString;
 
@@ -73,40 +74,61 @@ public class StringToAlphabetSprites : MonoBehaviour
             if(currentChar == essay[charIndex]) { // if pressed char equals current char on-screen...
                 charIndex++;
                 UpdateLetterObjects();
-                elapsedTime = 0;
+            } else {
+                Debug.LogWarning("Incorrect Key Has Been Inputted");
+                // IncorrectKeyPress(some index)
             }
         }
     }
 
-    void UpdateLetterObjects() {
-        int i = 0;
-        foreach(GameObject go in letterObjects){
-            Transform tr = letterTransforms[i];
-            UpdateEachLetterGameObj(currentChar, tr);
-            i++;
+    void UpdateLetterObjects() { // Called to update every letter in list
+        for(int i = 0; i < letterObjects.Length; i++) {
+            if((i + charIndex) < essayCharCount) { // check if charIndex exceeds what characters are left
+            UpdateEachLetterGameObj(i, essay[i + charIndex]);
+            } else {
+                HideLetterObject(i);
+            }
         }
     }
 
-    void UpdateEachLetterGameObj(char c, Transform tr) {
-        
+    void UpdateEachLetterGameObj(int index, char c) { // Update each letter to correspond with inputted essay text
+        Transform tr = letterTransforms[index];
+        LetterData data = letterObjects[index].GetComponent<LetterData>();
+
+        if(charIndex >= 0 && charIndex < essayCharCount) { // Check if index exists in string
+            if (charToSpriteMap.TryGetValue(c, out Sprite charSprite)) {
+                data.UpdateSprite(charSprite);
+            }
+        } 
+        // else {
+        //     HideLetterObject(index);
+        // }
     }
 
-    void CharToSpriteGameObject(char c, Transform tr)
-    {
-        //GameObject prevLetter = null;
+    void CharToSpriteGameObject(int index, char c) { // Generate every letter object ( EXECUTED ONLY ONCE )
         if (charToSpriteMap.TryGetValue(c, out Sprite sprite)) {
-            //Destroy(prevLetter);
-
+            Transform tr = letterTransforms[index];
             GameObject letterGameObject = Instantiate(letterPrefab, tr);
             Debug.Log($"Instantiated object for character: {c}");
             letterGameObject.name = $"Letter_{c}";
             LetterData data = letterGameObject.GetComponent<LetterData>();
             data.UpdateSprite(sprite);
             data.character = c;
-            //prevLetter = letterGameObject;
+            
+            letterObjects[index] = letterGameObject;
         }
         else {
             Debug.LogWarning($"Character '{c}' not found in dictionary.");
         }
+    }
+
+    private void IncorrectKeyPress(int index) { // called when the INCORRECT key is inputted
+
+    }
+
+    private void HideLetterObject(int index) {  // called in use cases when letter object must be blank
+        Sprite nullSprite = null;               // usually when a space is displayed or if the index is out of bounds
+        LetterData data = letterObjects[index].GetComponent<LetterData>();
+        data.UpdateSprite(nullSprite);
     }
 }
