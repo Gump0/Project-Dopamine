@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// Class in charge with storing Letter Object Data
 public class LetterData : MonoBehaviour
 {
     public Sprite sprite { get; set; }       // assinged alphabet sprite

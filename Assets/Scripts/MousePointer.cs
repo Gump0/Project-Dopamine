@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 // Script in charge with handling mouse inputs
 // And checkinf if the player clicks a window or not
 public class MousePointer : MonoBehaviour
