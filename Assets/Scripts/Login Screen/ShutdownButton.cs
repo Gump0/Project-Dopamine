@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class ShutdownButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void QuitTheGame()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Application.Quit();
     }
 }
