@@ -70,7 +70,7 @@ public class StringToAlphabetSprites : MonoBehaviour
              if (string.IsNullOrEmpty(input))
                 return;
             currentChar = input[0]; // store input as char
-            Debug.Log(essay[charIndex]);
+            //Debug.Log(essay[charIndex]);
             if(currentChar == essay[charIndex]) { // if pressed char equals current char on-screen...
                 charIndex++;
                 UpdateLetterObjects();
@@ -109,7 +109,7 @@ public class StringToAlphabetSprites : MonoBehaviour
         if (charToSpriteMap.TryGetValue(c, out Sprite sprite)) {
             Transform tr = letterTransforms[index];
             GameObject letterGameObject = Instantiate(letterPrefab, tr);
-            Debug.Log($"Instantiated object for character: {c}");
+            //Debug.Log($"Instantiated object for character: {c}");
             letterGameObject.name = $"Letter_{c}";
             LetterData data = letterGameObject.GetComponent<LetterData>();
             data.UpdateSprite(sprite);
