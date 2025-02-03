@@ -48,6 +48,8 @@ public class StringToAlphabetSprites : MonoBehaviour
             { 'X', alphabetSprites[25] },
             { 'Y', alphabetSprites[26] },
             { 'Z', alphabetSprites[27] },
+            { '!', alphabetSprites[28] },
+            { '?', alphabetSprites[29] },
             { ' ', null }
         };
     }
