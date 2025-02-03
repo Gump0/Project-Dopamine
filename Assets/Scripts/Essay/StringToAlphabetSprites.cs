@@ -28,7 +28,7 @@ public class StringToAlphabetSprites : MonoBehaviour
             { 'D', alphabetSprites[5] },
             { 'E', alphabetSprites[6] },
             { 'F', alphabetSprites[7] },
-            { 'G', alphabetSprites[8] },{ 'g', alphabetSprites[8] },
+            { 'G', alphabetSprites[8] },
             { 'H', alphabetSprites[9] },
             { 'I', alphabetSprites[10] },
             { 'J', alphabetSprites[11] },
@@ -50,6 +50,7 @@ public class StringToAlphabetSprites : MonoBehaviour
             { 'Z', alphabetSprites[27] },
             { '!', alphabetSprites[28] },
             { '?', alphabetSprites[29] },
+            { '\'', alphabetSprites[30] },
             { ' ', null }
         };
     }
