@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // SNAKE GAME CODE!
 // Courtesy to Zach for getting this working
 public class Food : MonoBehaviour
 {
     public BoxCollider2D gridArea;
+    public int FoodCount = 0;
+    public Text FoodCountText;
 
     private void Start()
     {
         gridArea = GameObject.Find("GridArea").GetComponent<BoxCollider2D>();
         RandomizePosition();
+        SnakeManager.OnPlayerDeath += ResetFoodCount;
     }
     private void RandomizePosition()
     {
@@ -27,7 +31,20 @@ public class Food : MonoBehaviour
     {
         if (other.tag == "Player") { 
         RandomizePosition();
+            FoodCount++;
+            FoodCountText.text = FoodCount.ToString("0");
         }
         
+    }
+
+    public void ResetFoodCount()
+    {
+        FoodCount = 0;
+        FoodCountText.text = FoodCount.ToString("0");
+    }
+
+    private void OnDestroy()
+    {
+        SnakeManager.OnPlayerDeath -= ResetFoodCount;
     }
 }

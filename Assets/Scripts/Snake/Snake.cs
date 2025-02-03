@@ -84,9 +84,16 @@ public class Snake : MonoBehaviour
         if (other.tag == "Food")
         {
             Grow();
+
         } else if (other.tag == "Obstacle")
         {
             ResetState();
+            die();
         }
+    }
+
+    private void die()
+    {
+        FindObjectOfType<SnakeManager>().PlayerDeath();
     }
 }
