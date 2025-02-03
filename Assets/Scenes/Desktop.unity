@@ -1335,6 +1335,62 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 771906135}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1161010172}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AnimateWindowOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OpenTaskTray
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ApplicationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TaskBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Login Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
