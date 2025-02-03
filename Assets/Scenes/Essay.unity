@@ -1629,12 +1629,56 @@ PrefabInstance:
       value: Application-Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1299383445}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8756159915384055916, guid: f1e9b82b0d060c4d7b01fe2805b98b10, type: 3}
     - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveEssayData
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OpenApplication
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StringToAlphabetSprites, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ApplicationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Desktop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

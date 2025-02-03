@@ -9,9 +9,7 @@ public class SnakeManager : MonoBehaviour
 
     public void PlayerDeath()
     {
-
         Debug.Log("Player has died!");
         OnPlayerDeath?.Invoke();
-
     }
 }

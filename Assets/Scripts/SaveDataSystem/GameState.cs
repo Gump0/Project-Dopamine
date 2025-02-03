@@ -8,7 +8,7 @@ public class GameState
 {
     public float[][] windowPositions { get; set; } // Stores the position of every window in the desktop scene
     public int snakeHighScore { get; set; } // tracks snake game highscore
-    public int currentEssayProgress { get; set; } // stores essay char index value
+    public int essayCharIndex { get; set; } // stores essay char index value
     public int clickerScore { get; set; } // stores players clicker game score
     public string playerWallpaper { get; set; } // stores players wallpaper sprite image in Base64 format
     public string playerUserImage { get; set; } // stores players profile picture sprite image in Base64 format

@@ -7,6 +7,7 @@ using UnityEngine;
 // and displaying the correct characters the player needs to type
 public class StringToAlphabetSprites : MonoBehaviour
 {
+    public GameState gameState; // gamestate reference to store data
     public string essay;
     public Sprite[] alphabetSprites;                                // We still need to store a collection of sprites :(
     public Transform[] letterTransforms;                            // stores the transforms for the word objects
@@ -56,6 +57,9 @@ public class StringToAlphabetSprites : MonoBehaviour
     }
 
     void Start() {
+        gameState = SaveSystem.Load(); // Load saved data
+        charIndex = gameState.essayCharIndex; // Restore essay progress
+
         essayCharCount = essay.Length;
         InitDictionary();
         for(int i = 0; i < letterTransforms.Length; i++) {
@@ -133,5 +137,10 @@ public class StringToAlphabetSprites : MonoBehaviour
         Sprite nullSprite = null;               // usually when a space is displayed or if the index is out of bounds
         LetterData data = letterObjects[index].GetComponent<LetterData>();
         data.UpdateSprite(nullSprite);
+    }
+
+    public void SaveEssayData() {
+        gameState.essayCharIndex = charIndex;
+        SaveSystem.Save(gameState);
     }
 }
