@@ -8,17 +8,20 @@ using UnityEngine.UI;
 public class Food : MonoBehaviour
 {
     public BoxCollider2D gridArea;
-    public int FoodCount = 0;
-    public Text FoodCountText;
+    public int foodCount = 0;
+    public Text currentScoreText, highScoreText;
 
-    private void Start()
-    {
+    SnakeManager sm;
+
+    private void Start() {
+        SnakeManager sm = GameObject.Find("SnakeManager").GetComponent<SnakeManager>();
         gridArea = GameObject.Find("GridArea").GetComponent<BoxCollider2D>();
         RandomizePosition();
         SnakeManager.OnPlayerDeath += ResetFoodCount;
+        highScoreText.text = "High Score: " + sm.highScore.ToString();
     }
-    private void RandomizePosition()
-    {
+
+    private void RandomizePosition() {
         Bounds bounds = this.gridArea.bounds;
 
         float x = Random.Range(bounds.min.x, bounds.max.x);
@@ -27,24 +30,32 @@ public class Food : MonoBehaviour
         this.transform.position = new Vector3(Mathf.Round(x), Mathf.Round(y), 0.0f);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
+    private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") { 
         RandomizePosition();
-            FoodCount++;
-            FoodCountText.text = FoodCount.ToString("0");
+            foodCount++;
+            currentScoreText.text = "Score: " + foodCount.ToString();
         }
-        
+        UpdateHighScore();
     }
 
-    public void ResetFoodCount()
-    {
-        FoodCount = 0;
-        FoodCountText.text = FoodCount.ToString("0");
+    public void ResetFoodCount() {
+        foodCount = 0;
+        currentScoreText.text = "Score: " + foodCount.ToString();
     }
 
-    private void OnDestroy()
-    {
+    private void OnDestroy() {
         SnakeManager.OnPlayerDeath -= ResetFoodCount;
+    }
+
+    public void UpdateHighScore() {
+        SnakeManager sm = GameObject.Find("SnakeManager").GetComponent<SnakeManager>();
+        if(sm == null){
+            Debug.LogError("FOOD CLASS : SnakeManager Reference is NULL!");
+            return;
+        }
+        highScoreText.text = "High Score: " + sm.highScore.ToString();
+        if(foodCount >= sm.highScore)
+        sm.highScore++;
     }
 }
