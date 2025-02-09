@@ -6,12 +6,20 @@ using UnityEngine;
 // necessary information.
 public class GameState
 {
-    public float[][] windowPositions { get; set; } // Stores the position of every window in the desktop scene
-    public int snakeHighScore { get; set; } // tracks snake game highscore
-    public int essayCharIndex { get; set; } // stores essay char index value
-    public int clickerScore { get; set; } // stores players clicker game score
-    public string playerWallpaper { get; set; } // stores players wallpaper sprite image in Base64 format
-    public string playerUserImage { get; set; } // stores players profile picture sprite image in Base64 format
+    public float?[] windowPosX { get; set; }         // Stores the position of every window in the desktop scene
+    = new float?[] { 0, 3, -3.75f, null, null };     // Defualt values
+    public float?[] windowPosY { get; set; }
+    = new float?[] { 0, -1, 2.25f, null, null };     // Defualt values
+    public int?[] windowType { get; set; }           // Tracks what window type each saved window was according to index stored in window manager
+
+    public int snakeHighScore { get; set; }         // tracks snake game highscore
+
+    public int essayCharIndex { get; set; }         // stores essay char index value
+
+    public int clickerScore { get; set; }           // stores players clicker game score
+
+    public string playerWallpaper { get; set; }     // stores players wallpaper sprite image in Base64 format
+    public string playerUserImage { get; set; }     // stores players profile picture sprite image in Base64 format
 
     // Converts Sprite to Base64
     public void SetSprite(string property, Sprite sprite) {

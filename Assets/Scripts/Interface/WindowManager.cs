@@ -6,18 +6,31 @@ using UnityEngine;
 // how a window manager functions within an operating system
 public class WindowManager : MonoBehaviour
 {
-    [SerializeField] public List<GameObject> windowList = new List<GameObject>();
-    protected int index {get; private set;}
+    //public GameState gameState; // gamestate reference to store data
+    public GameObject[] windowPrefabs; // stores references to different types of windows that will spawn according to save data
+
+    public List<GameObject> windowList = new List<GameObject>();
+    [SerializeField] private GameObject windowPrefab;
+    protected int index { get; private set; }
 
     private void Start() {
+        //gameState = SaveSystem.Load(); // Load saved data
+        //if(gameState == null) Debug.LogError("WINDOW MANAGER CLASS : gameState == null!");
+        
         // find every ungrouped window prior to game runtime
         // and put it in list
         GameObject[] unGroupedWindows = GameObject.FindGameObjectsWithTag("Window");
 
-        foreach(GameObject wn in unGroupedWindows){
-            windowList.Add(wn);
-        }
+        // for(int i = 0; i < unGroupedWindows.Length; i++) {
+        //     windowList.Add(unGroupedWindows[i]);
+        //     if(gameState.windowPosX[i] != null){
+        //         gameState.windowPosX[i] = unGroupedWindows[i].transform.position.x;
+        //         gameState.windowPosY[i] = unGroupedWindows[i].transform.position.y;
+        //     }
+        // }
         UpdateListedSortingOrders(); // make sure all windows are sorted right away! :D
+        //gameState.windowCount = unGroupedWindows.Length;
+        //RespawnSavedWindows();
     }
 
     public void UpdateFocusedWindow(GameObject clickedWindow) { // On window click
@@ -50,12 +63,35 @@ public class WindowManager : MonoBehaviour
         }
     }
 
-    private void UpdateFocusedWindowComponents(GameObject clickedWindow, int parentWindowSortingOrder) { // add
-        // Update each window components sorting order
-    }
-
     public void SpawnWindow(GameObject newWindow) {
         windowList.Add(newWindow);
         Instantiate(newWindow);
+    }
+
+    public void RemoveClosedWindowData(GameObject closingWindow) {
+
+    }
+    // ILL FIGURE IT OUT LATER (I FORGOT LIST IS DYNAMIC AND I NEED TO FIND ANOTHER WAY)
+    // public void SaveDekstopState() { // called whenever scene switches away from desktop
+    //     foreach(GameObject wn in windowList) {
+    //         if(wn == null) { // remove any null windows
+    //             windowList.Remove(wn);
+    //             gameState.windowCount--; // reduce window count for next instance
+    //         }
+    //     }
+    //     SaveSystem.Save(gameState);
+    // }
+
+    // private void RespawnSavedWindows() { // Respawn and set position of each window based off save-file data
+    //     if(gameState.windowPosX.Length == 0 || gameState.windowPosY.Length == 0) return;
+    //     for(int i = 0; i < gameState.windowCount; i++) {
+    //         GameObject newWin = Instantiate(windowPrefab, new Vector2
+    //         (gameState.windowPosX[i], gameState.windowPosY[i]), Quaternion.identity);
+    //         windowList[i] = newWin;
+    //     }
+    // }
+
+    private void UpdateFocusedWindowComponents(GameObject clickedWindow, int parentWindowSortingOrder) { // add
+        // Update each window components sorting order
     }
 }

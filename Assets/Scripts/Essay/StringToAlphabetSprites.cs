@@ -8,6 +8,7 @@ using UnityEngine;
 public class StringToAlphabetSprites : MonoBehaviour
 {
     public GameState gameState; // gamestate reference to store data
+
     public string essay;
     public Sprite[] alphabetSprites;                                // We still need to store a collection of sprites :(
     public Transform[] letterTransforms;                            // stores the transforms for the word objects

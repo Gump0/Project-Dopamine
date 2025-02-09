@@ -16,6 +16,7 @@ public class WindowFunctions : MonoBehaviour
     }
 
     public void CloseWindow(GameObject closingButton) {
+        windowManager.RemoveClosedWindowData(closingButton);
         GameObject closingWindow = GrabElementWindowParent(closingButton);
         windowManager.windowList.Remove(closingWindow);
         Destroy(closingWindow);
