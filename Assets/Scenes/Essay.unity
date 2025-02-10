@@ -1751,9 +1751,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3915535809171163754, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915535809171163754, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915535809171163754, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915535809171163754, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915535809171163754, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915535809171163754, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 4198247853370039105, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
       propertyPath: m_Name
       value: Application-Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716191102779205303, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1806,6 +1834,10 @@ PrefabInstance:
     - target: {fileID: 5851015825101913468, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766055900398788959, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9126857703093760604, guid: 3e76437aa4bab1565b3da4bf49d3b5df, type: 3}
       propertyPath: m_Sprite
