@@ -10,6 +10,8 @@ public class ApplicationManager : MonoBehaviour
     [SerializeField] private GameObject appOpenPrefab; // prefab reference to window that simulates loading
     [Range(0.05f, 1.25f)] [SerializeField] private float duration = 0.5f; // duration of animation
 
+    bool isLoading = false; // keeps track if window is already animating
+
     // Method in charge with opening the corresponding application
     // Any button in system tray will pass the name of its corresponding scene through this method.
     public void OpenApplication(string appName) {
@@ -18,6 +20,8 @@ public class ApplicationManager : MonoBehaviour
     // Special case method to be called when a application is run
     // From the Desktop scene, including the window open logic.
     public void AnimateWindowOpen(string appName) {
+        if(isLoading) return; // this is included to prevent mutliple loading animations at once
+        isLoading = true;
         GameObject openApp = Instantiate(appOpenPrefab);
         StartCoroutine(AnimateWindow(openApp, appName));
     }
