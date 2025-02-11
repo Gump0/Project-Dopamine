@@ -13,6 +13,7 @@ TagManager:
   - Obstacle
   - Food
   - AppClose
+  - DesktopIcon
   layers:
   - Default
   - TransparentFX

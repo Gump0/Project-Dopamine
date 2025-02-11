@@ -39,7 +39,7 @@ public class EssayUserInterface : MonoBehaviour
     void UpdateStatusText() { // Updates the tmp asset based off player input
         float percentText =  progress * 100;
         percentText = Mathf.Round(percentText);
-        string displayText = percentText.ToString();
+        string displayText = percentText.ToString() + "%";
         statusText.text = displayText;
  
         if(progress == 100)

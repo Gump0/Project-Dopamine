@@ -21,6 +21,7 @@ public class ApplicationManager : MonoBehaviour
     // From the Desktop scene, including the window open logic.
     public void AnimateWindowOpen(string appName) {
         if(isLoading) return; // this is included to prevent mutliple loading animations at once
+        HideDesktopIcons();
         isLoading = true;
         GameObject openApp = Instantiate(appOpenPrefab);
         StartCoroutine(AnimateWindow(openApp, appName));
@@ -50,5 +51,12 @@ public class ApplicationManager : MonoBehaviour
 
         // Launch the application after the animation completes
         OpenApplication(appName);
+    }
+
+    private void HideDesktopIcons() { // Executed during scene switches using 'AnimateWindowOpen()'
+        GameObject[] icons = GameObject.FindGameObjectsWithTag("DesktopIcon");
+        foreach(GameObject icon in icons) {
+            icon.SetActive(false);
+        }
     }
 }
