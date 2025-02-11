@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameState gameState; // gamestate reference to store data
+
     public Text ClicksTotalText;
     public Text AutoModText;
     public Text Upgrade1AmountText;
@@ -24,12 +26,18 @@ public class GameManager : MonoBehaviour
     public int Upgrade3Amount;
 
     public GameObject Medal;
+    bool hasMedal = false;
 
     bool hasUpgrade3;
     float elapsedTime;
 
     public void Start()
     {
+        gameState = SaveSystem.Load(); // Load saved data
+        hasMedal = gameState.hasMedal;
+        TotalClicks = gameState.totalClickerScore;
+        autoClickModifier = gameState.clickerUpgrade;
+        
         Medal.SetActive(false);
     }
     public void AddClicks()
@@ -93,6 +101,7 @@ public class GameManager : MonoBehaviour
             Medal.SetActive(true);
             TotalClicks -= minimumClicksToUnlockMedal;
             ClicksTotalText.text = TotalClicks.ToString();
+            hasMedal = true;
         }
     }
 
@@ -109,6 +118,13 @@ public class GameManager : MonoBehaviour
         }
         ClicksTotalText.text = TotalClicks.ToString();
         AutoModText.text = autoClickModifier.ToString();
+    }
+
+    public void SaveGame() {
+        gameState.hasMedal = hasMedal;
+        gameState.totalClickerScore = TotalClicks;
+        gameState.clickerUpgrade = autoClickModifier;
+        SaveSystem.Save(gameState);
     }
 }
 

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Snake.unity
     guid: a372cd2a00c3c7cf29bc140b1584ad7e
+  - enabled: 1
+    path: Assets/Scenes/Clicker Game.unity
+    guid: ec7cf218f9bf43446b6ddc923373dd5d
   m_configObjects: {}

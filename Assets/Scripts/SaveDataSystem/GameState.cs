@@ -16,7 +16,9 @@ public class GameState
 
     public int essayCharIndex { get; set; }         // stores essay char index value
 
-    public int clickerScore { get; set; }           // stores players clicker game score
+    public int totalClickerScore { get; set; }      // stores players clicker game score
+    public int clickerUpgrade { get; set; }         // stores players clicker game upgrade value
+    public bool hasMedal { get; set; }              // tracks of player has medal
 
     public string playerWallpaper { get; set; }     // stores players wallpaper sprite image in Base64 format
     public string playerUserImage { get; set; }     // stores players profile picture sprite image in Base64 format
