@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532f46e625d0fd940879427121c1c6a4, type: 3}
   m_Name: snakeEnding
   m_EditorClassIdentifier: 
-  message: 
+  message: SNAKE ENDING

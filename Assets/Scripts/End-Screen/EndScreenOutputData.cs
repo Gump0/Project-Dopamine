@@ -12,10 +12,16 @@ public class EndScreenOutputData : MonoBehaviour
 
     [Header("MANAGES OUTPUTTED DATA")]
     public TextData[] dialogueData; // stores every possible end message
-    public int index;               // indexes array data
+                                    // indexes array data
+                                    // 0 = fail text
+                                    // 1 = clicker text
+                                    // 2 = snake text
+                                    // 3 = essay text
     [Header("DISPLAYS DATA")]
-    public Image snakeCheck, essayCheck, clickerCheck;
-    public Image snakeIcon, essayIcon, clickerIcon;
+    public Image snakeCheck;
+    public Image essayCheck;
+    public Image clickerCheck;
+    public Sprite checkMark;
     public TMP_Text outputBox;
 
     [Header("Minimum Snake High-Score Required")]
@@ -32,15 +38,35 @@ public class EndScreenOutputData : MonoBehaviour
     }
 
     void CheckAppStats() {  // responsible for checking if each app condition should be checked and detirmine what the output message should be
-        // SET LOCAL CONDITION CHECKS BASSED OFF GAMESTATE DATA
         clickerGameCondition = gameState.hasMedal;
-        if(gameState.snakeHighScore >= minSnakeScore) snakeCondition = true;
+        if(gameState.snakeHighScore <= minSnakeScore) snakeCondition = true;
         essayComplete = gameState.essayComplete;
         
         SetComponents();
     }
 
     void SetComponents() {  // set each image according to boolean data and set output text
+        string outputText = "";
+        if (clickerGameCondition)
+        {
+            clickerCheck.sprite = checkMark;
+            outputText = dialogueData[1].message;
+            Debug.Log(clickerGameCondition);
+        }
+        if (snakeCondition)
+        {
+            snakeCheck.sprite = checkMark;
+            outputText = dialogueData[2].message;
+            Debug.Log(snakeCondition);
+        }
+        if (essayComplete)
+        {
+            essayCheck.sprite = checkMark;
+            outputText = dialogueData[3].message;
+            Debug.Log(essayComplete);
+        }
 
+        if (dialogueData == null) Debug.LogError("(dialogueData[index] == null");
+        outputBox.text = outputText;
     }
 }
