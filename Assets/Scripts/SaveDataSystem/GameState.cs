@@ -15,6 +15,7 @@ public class GameState
     public int snakeHighScore { get; set; }         // tracks snake game highscore
 
     public int essayCharIndex { get; set; }         // stores essay char index value
+    public bool essayComplete { get; set; }          // stores boolean that checks if essay has been complete
 
     public int totalClickerScore { get; set; }      // stores players clicker game score
     public int clickerUpgrade { get; set; }         // stores players clicker game upgrade value

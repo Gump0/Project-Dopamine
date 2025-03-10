@@ -70,7 +70,10 @@ public class StringToAlphabetSprites : MonoBehaviour
     }
 
     void Update() {
-        if(charIndex >= essayCharCount) return; // check if end of essay is reached.
+        if(charIndex >= essayCharCount) {
+            gameState.essayComplete = true;
+            return; // check if end of essay is reached.
+        } 
 
         if(Input.anyKeyDown) { // check for keyboard inputs
             string input = Input.inputString;
