@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Clicker Game.unity
     guid: ec7cf218f9bf43446b6ddc923373dd5d
+  - enabled: 1
+    path: Assets/Scenes/ENDSCENE.unity
+    guid: 37aa4f8df910b844e9e72010e34a6fa2
   m_configObjects: {}

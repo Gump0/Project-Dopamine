@@ -707,7 +707,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6270cf02426836f4291de75b2a574050, type: 2}
   - {fileID: 11400000, guid: 802112c45e588204d8da8940ca94aa36, type: 2}
   - {fileID: 11400000, guid: e7c96119eae403f40bad5ef75d7e7bb6, type: 2}
-  index: 0
   snakeCheck: {fileID: 804312638}
   essayCheck: {fileID: 773481397}
   clickerCheck: {fileID: 1490696574}

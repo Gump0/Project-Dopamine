@@ -1,7 +1,5 @@
 // Class that reads save data and outputs
 // a final ending response based off JSON data
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -39,7 +37,7 @@ public class EndScreenOutputData : MonoBehaviour
 
     void CheckAppStats() {  // responsible for checking if each app condition should be checked and detirmine what the output message should be
         clickerGameCondition = gameState.hasMedal;
-        if(gameState.snakeHighScore <= minSnakeScore) snakeCondition = true;
+        if(gameState.snakeHighScore >= minSnakeScore) snakeCondition = true;
         essayComplete = gameState.essayComplete;
         
         SetComponents();
