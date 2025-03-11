@@ -32,6 +32,8 @@ public class EndScreenOutputData : MonoBehaviour
 
     void Start() {
         gameState = SaveSystem.Load();
+        gameState.maxGameTime = 0;
+        SaveSystem.Save(gameState);
         CheckAppStats();
     }
 

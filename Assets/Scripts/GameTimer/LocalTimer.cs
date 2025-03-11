@@ -6,31 +6,36 @@ public class LocalTimer : MonoBehaviour
 {
     public GameState gamestate; // Gamestate ref
 
-    float savedTime;            // time stored
-    float elapsedTime;          // time spent on scene
+    [SerializeField] float savedTime;            // time stored
+    [SerializeField] float elapsedTime;          // time spent on scene
 
-    [Header("MAXIMUM GAME TIME")]
-    public float maxGameTime = 600f;   // detirmines the maximum duration of play
+    DesktopTimerUI timerUI;                     // store timer ui class and use only in desktop
 
     public void SaveTimeData() { // ALWAYS SAVE TIME DATA BEFORE SWITCHING SCENES
-        gamestate.gameTime = elapsedTime + savedTime;
+        gamestate.maxGameTime = savedTime - elapsedTime;
         SaveSystem.Save(gamestate);
     }
 
     private void CheckIfTimeExceeded() { // called whenever elapsedTime + savedTime > time limit
-        if (savedTime + elapsedTime < maxGameTime) return;
+        if (savedTime - elapsedTime > 0) return;
         ApplicationManager appMan = GameObject.Find("ApplicationManager").GetComponent<ApplicationManager>();
 
         appMan.OpenApplication("ENDSCENE"); // end the game
     }
 
     void Start() {
+        if(GameObject.Find("Timer") != null) {  // check if timer object exists
+            timerUI = GameObject.Find("Timer").GetComponent<DesktopTimerUI>();
+        }
+
         gamestate = SaveSystem.Load();
-        savedTime = gamestate.gameTime;
+        savedTime = gamestate.maxGameTime;
     }
 
     void Update() {
         elapsedTime += Time.deltaTime;
         CheckIfTimeExceeded();
+
+        if(timerUI != null) timerUI.UpdateTimerUI(savedTime - elapsedTime);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 // necessary information.
 public class GameState
 {
-    public float gameTime;                           // Stores the total time the player has played the game for
+    public float maxGameTime = 600;                  // Stores the maximum playtime in seconds
 
     public float?[] windowPosX { get; set; }         // Stores the position of every window in the desktop scene
     = new float?[] { 0, 3, -3.75f, null, null };     // Defualt values
