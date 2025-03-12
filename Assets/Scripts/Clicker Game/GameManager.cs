@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
 
     public Text ClicksTotalText;
     public Text AutoModText;
-    public Text Upgrade1AmountText;
-    public Text Upgrade2AmountText;
-    public Text Upgrade3AmountText;
+    //public Text Upgrade1AmountText;
+    //public Text Upgrade2AmountText;
+    //public Text Upgrade3AmountText;
 
     public int TotalClicks, autoClickModifier = 0;
     public int TotalClicksModifier = 0;
@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
 
     bool hasUpgrade3;
     float elapsedTime;
+
+    public PlayAudio playAudioScriptForUp1;
+    public PlayAudio playAudioScriptForUp2;
+    public PlayAudio playAudioScriptForUp3;
+    public PlayAudio playAudioScriptForMedal;
 
     public void Start()
     {
@@ -51,7 +56,6 @@ public class GameManager : MonoBehaviour
                 TotalClicks++;
                 ClicksTotalText.text = TotalClicks.ToString();
             }
-
         }
     }
 
@@ -63,7 +67,9 @@ public class GameManager : MonoBehaviour
             TotalClicks -= minimumClicksToUnlockUpgrade;
             ClicksTotalText.text = TotalClicks.ToString();
             Upgrade1Amount++;
-            Upgrade1AmountText.text = Upgrade1Amount.ToString();
+            //Upgrade1AmountText.text = Upgrade1Amount.ToString();
+
+            playAudioScriptForUp1.playClip();
         }
     }
 
@@ -75,7 +81,9 @@ public class GameManager : MonoBehaviour
             TotalClicks -= minimumClicksToUnlockUpgrade2;
             ClicksTotalText.text = TotalClicks.ToString();
             Upgrade2Amount++;
-            Upgrade2AmountText.text = Upgrade2Amount.ToString();
+            //Upgrade2AmountText.text = Upgrade2Amount.ToString();
+
+            playAudioScriptForUp2.playClip();
         }
     }
 
@@ -88,10 +96,10 @@ public class GameManager : MonoBehaviour
             TotalClicks -= minimumClicksToUnlockUpgrade3;
             ClicksTotalText.text = TotalClicks.ToString();
             Upgrade3Amount++;
-            Upgrade3AmountText.text = Upgrade3Amount.ToString();
+            //Upgrade3AmountText.text = Upgrade3Amount.ToString();
+
+            playAudioScriptForUp3.playClip();
         }
-
-
     }
 
     public void BuyMedal()
@@ -102,6 +110,8 @@ public class GameManager : MonoBehaviour
             TotalClicks -= minimumClicksToUnlockMedal;
             ClicksTotalText.text = TotalClicks.ToString();
             hasMedal = true;
+
+            playAudioScriptForMedal.playClip();
         }
     }
 
