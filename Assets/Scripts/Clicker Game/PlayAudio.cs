@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayAudio : MonoBehaviour
@@ -11,7 +9,6 @@ public class PlayAudio : MonoBehaviour
     public void playClip()
     {
         audioSource.clip = soundeffect;
-        audioSource.Play();
-
+        audioSource.PlayOneShot(soundeffect);
     }
 }
