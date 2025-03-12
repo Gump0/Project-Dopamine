@@ -11,6 +11,8 @@ public class Snake : MonoBehaviour
     public int initialSize = 4;
     private float elapsedTime, updateInterval = 0.05f; // 
 
+    public PlayAudio playAudioScript;
+
     private void Start() {
         ResetState();
     }
@@ -50,6 +52,8 @@ public class Snake : MonoBehaviour
         segment.position = _segments[_segments.Count - 1].position;
 
         _segments.Add(segment);
+
+        playAudioScript.playClip();
     }
 
     private void ResetState() {

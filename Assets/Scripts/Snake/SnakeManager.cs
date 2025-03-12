@@ -13,6 +13,8 @@ public class SnakeManager : MonoBehaviour
     public int highScore = 0;
     Food food;
 
+    public PlayAudio playAudioScript;
+
     void Start() {
         gameState = SaveSystem.Load(); // Load saved data
         highScore = gameState.snakeHighScore;
@@ -23,6 +25,8 @@ public class SnakeManager : MonoBehaviour
     public void PlayerDeath() {
         Debug.Log("Player has died!");
         OnPlayerDeath?.Invoke();
+
+        playAudioScript.playClip();
     }
 
     public void SaveSnakeData() { // called on game close (just like I coded for the Essay)
