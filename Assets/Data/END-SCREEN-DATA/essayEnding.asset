@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532f46e625d0fd940879427121c1c6a4, type: 3}
   m_Name: essayEnding
   m_EditorClassIdentifier: 
-  message: ESSAY TEXT
+  message: "Your masterful explanation of your very academic and insightful topic
+    has impressed your professor to a degree unseen for a project that\u2019s only
+    worth 2% of your grade. With your massive noggin you\u2019ve managed to achieve
+    an astronomical 99% on your essay and presentation and put all the other losers
+    in your class to shame. Fantastic work! Grade: +A "

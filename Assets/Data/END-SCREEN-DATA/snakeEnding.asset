@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532f46e625d0fd940879427121c1c6a4, type: 3}
   m_Name: snakeEnding
   m_EditorClassIdentifier: 
-  message: SNAKE ENDING
+  message: "Somehow you actually managed to get a pretty decent grade for someone
+    who just spent 9 hours playing Snake. Turns out your professor used to be big
+    into the Snake competitive scene back in the day and was feeling nostalgic seeing
+    your high scores. Thank god for bias grading! You\u2019ve managed to do pretty
+    alright. Grade: B "
