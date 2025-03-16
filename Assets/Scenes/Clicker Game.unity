@@ -270,7 +270,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 2754118933031566219, guid: 435b857b5fa579b43b2582dfefcb2970, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.502
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1370,9 +1370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClicksTotalText: {fileID: 445302960}
   AutoModText: {fileID: 1232965703}
-  Upgrade1AmountText: {fileID: 0}
-  Upgrade2AmountText: {fileID: 0}
-  Upgrade3AmountText: {fileID: 0}
   TotalClicks: 0
   autoClickModifier: 0
   TotalClicksModifier: 0
