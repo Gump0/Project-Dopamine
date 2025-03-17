@@ -23,29 +23,6 @@ public class GameState
     public int clickerUpgrade { get; set; }         // stores players clicker game upgrade value
     public bool hasMedal { get; set; }              // tracks of player has medal
 
-    public string playerWallpaper { get; set; }     // stores players wallpaper sprite image in Base64 format
-    public string playerUserImage { get; set; }     // stores players profile picture sprite image in Base64 format
-
-    // Converts Sprite to Base64
-    public void SetSprite(string property, Sprite sprite) {
-        if (sprite == null) return;
-
-        Texture2D texture = sprite.texture;
-        byte[] bytes = texture.EncodeToPNG();
-        string base64 = Convert.ToBase64String(bytes);
-
-        if (property == "wallpaper") playerWallpaper = base64;
-        else if (property == "userImage") playerUserImage = base64;
-    }
-
-    // Converts Base64 back to Sprite
-    public Sprite GetSprite(string property) {
-        string base64 = property == "wallpaper" ? playerWallpaper : playerUserImage;
-        if (string.IsNullOrEmpty(base64)) return null;
-
-        byte[] bytes = Convert.FromBase64String(base64);
-        Texture2D texture = new Texture2D(2, 2);
-        texture.LoadImage(bytes);
-        return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-    }
+    public int playerWallpaperIndex { get; set; }   // stores players wallpaper index
+    public int playerUserImageIndex { get; set; }   // stores players profile picture index
 }
