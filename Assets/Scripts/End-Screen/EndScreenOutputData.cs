@@ -46,7 +46,7 @@ public class EndScreenOutputData : MonoBehaviour
     }
 
     void SetComponents() {  // set each image according to boolean data and set output text
-        string outputText = "";
+        string outputText = dialogueData[0].message;
         if (clickerGameCondition)
         {
             clickerCheck.sprite = checkMark;
