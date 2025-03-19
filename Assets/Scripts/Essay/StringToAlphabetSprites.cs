@@ -160,6 +160,7 @@ public class StringToAlphabetSprites : MonoBehaviour
 
     public void SaveEssayData() {
         gameState.essayCharIndex = charIndex;
+        SaveTimeData();
         SaveSystem.Save(gameState);
     }
 

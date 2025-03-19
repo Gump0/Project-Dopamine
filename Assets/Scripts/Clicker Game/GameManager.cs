@@ -152,6 +152,7 @@ public class GameManager : MonoBehaviour
         gameState.hasMedal = hasMedal;
         gameState.totalClickerScore = TotalClicks;
         gameState.clickerUpgrade = autoClickModifier;
+        SaveTimeData();
         SaveSystem.Save(gameState);
     }
 

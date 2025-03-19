@@ -13,7 +13,7 @@ public class SnakeManager : MonoBehaviour
     public int highScore = 0;
 
     Food food;
-    // LOCALTIMER.CS BOILERPLATE CODE (rip locattimer.cs)
+    // LOCALTIMER.CS BOILERPLATE CODE (rip localtimer.cs)
     [SerializeField] float savedTime;            // time stored
     [SerializeField] float elapsedTime;          // time spent on scene
 
