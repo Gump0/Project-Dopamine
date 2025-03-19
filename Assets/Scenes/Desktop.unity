@@ -734,9 +734,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1064703204}
+      - m_Target: {fileID: 1064703205}
         m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
-        m_MethodName: DecreaseIndex
+        m_MethodName: DecreaseWallpaperIndex
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1105,6 +1105,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1064703205}
+        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
+        m_MethodName: SaveIndexs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 771906135}
         m_TargetAssemblyTypeName: ApplicationManager, Assembly-CSharp
         m_MethodName: AnimateWindowOpen
@@ -1115,30 +1127,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Essay
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1064703204}
-        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
-        m_MethodName: SaveWallpaperIndex
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1064703205}
-        m_TargetAssemblyTypeName: UpdatePlayerIcon, Assembly-CSharp
-        m_MethodName: SaveIconIndex
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &212393710
@@ -1736,9 +1724,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1064703204}
+      - m_Target: {fileID: 1064703205}
         m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
-        m_MethodName: IncreaseIndex
+        m_MethodName: IncreaseWallpaperIndex
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2446,18 +2434,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 771906135}
-        m_TargetAssemblyTypeName: ApplicationManager, Assembly-CSharp
-        m_MethodName: AnimateWindowOpen
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Clicker Game
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 632484654}
         m_TargetAssemblyTypeName: LocalTimer, Assembly-CSharp
         m_MethodName: SaveTimeData
@@ -2482,9 +2458,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1064703204}
+      - m_Target: {fileID: 1064703205}
         m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
-        m_MethodName: SaveWallpaperIndex
+        m_MethodName: SaveIndexs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2494,16 +2470,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1064703205}
-        m_TargetAssemblyTypeName: UpdatePlayerIcon, Assembly-CSharp
-        m_MethodName: SaveIconIndex
-        m_Mode: 1
+      - m_Target: {fileID: 771906135}
+        m_TargetAssemblyTypeName: ApplicationManager, Assembly-CSharp
+        m_MethodName: AnimateWindowOpen
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Clicker Game
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &512981755
@@ -3717,8 +3693,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1064703205}
-        m_TargetAssemblyTypeName: UpdatePlayerIcon, Assembly-CSharp
-        m_MethodName: DecreaseIndex
+        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
+        m_MethodName: DecreaseIconIndex
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4708,8 +4684,8 @@ GameObject:
   - component: {fileID: 1064703203}
   - component: {fileID: 1064703202}
   - component: {fileID: 1064703201}
-  - component: {fileID: 1064703204}
   - component: {fileID: 1064703205}
+  - component: {fileID: 1064703204}
   m_Layer: 0
   m_Name: WallpaperObj
   m_TagString: Untagged
@@ -4805,16 +4781,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064703200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7d84e93c8e0af5ebbc469372dcb9b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4964eecc2d1b5c31d9bdaafdb0a5f3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wallpapers:
   - {fileID: 21300000, guid: c8cad88dbc38cd447b5893a104de3659, type: 3}
   - {fileID: 21300000, guid: 916149d3fe3607d46a14e4973b87fe98, type: 3}
-  - {fileID: 21300000, guid: 3a457530bdbc2c8409922af38d8676ce, type: 3}
   - {fileID: 21300000, guid: a249eb4dc5da9db4194874ac0d36e664, type: 3}
   - {fileID: 21300000, guid: d36b60db20b92ae4cab21a47d0a55445, type: 3}
-  wallpaperIndex: 0
+  - {fileID: 21300000, guid: 2d61ad76a79d07148aaddee0ca110772, type: 3}
+  - {fileID: 21300000, guid: 3a457530bdbc2c8409922af38d8676ce, type: 3}
 --- !u!114 &1064703205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4824,18 +4800,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064703200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f28f01c9afcd2989ca94d78aedc200, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b7d84e93c8e0af5ebbc469372dcb9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallpapers:
+  - {fileID: 21300000, guid: c8cad88dbc38cd447b5893a104de3659, type: 3}
+  - {fileID: 21300000, guid: 916149d3fe3607d46a14e4973b87fe98, type: 3}
+  - {fileID: 21300000, guid: a249eb4dc5da9db4194874ac0d36e664, type: 3}
+  - {fileID: 21300000, guid: d36b60db20b92ae4cab21a47d0a55445, type: 3}
+  - {fileID: 21300000, guid: 2d61ad76a79d07148aaddee0ca110772, type: 3}
+  - {fileID: 21300000, guid: 3a457530bdbc2c8409922af38d8676ce, type: 3}
   icons:
-  - {fileID: 21300000, guid: 809375b3b0630e549bb6ebf5e5f0c4a7, type: 3}
+  - {fileID: 21300000, guid: d5b5a99d378c3c045a9b9530c4cdd480, type: 3}
   - {fileID: 21300000, guid: b422b227cc781af4b8bf5aa78c169731, type: 3}
   - {fileID: 21300000, guid: d47ed1eb1c16f824988aef451a03b2b2, type: 3}
   - {fileID: 21300000, guid: 4e6ea86aa84101d4b80b06d9132e5ed1, type: 3}
   - {fileID: 21300000, guid: 9861c8c32de05ac48bf7493c0346af50, type: 3}
+  - {fileID: 21300000, guid: 809375b3b0630e549bb6ebf5e5f0c4a7, type: 3}
   - {fileID: 21300000, guid: 078d39aeabe6975419908a0bd691a615, type: 3}
-  - {fileID: 21300000, guid: d5b5a99d378c3c045a9b9530c4cdd480, type: 3}
   - {fileID: 21300000, guid: 667b3a52a1668e443b586f0b9f5ee82a, type: 3}
+  wallpaperIndex: 0
   iconIndex: 0
 --- !u!1 &1066349626
 GameObject:
@@ -5672,8 +5656,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1064703205}
-        m_TargetAssemblyTypeName: UpdatePlayerIcon, Assembly-CSharp
-        m_MethodName: IncreaseIndex
+        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
+        m_MethodName: IncreaseIconIndex
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5956,6 +5940,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1064703205}
+        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
+        m_MethodName: SaveIndexs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 771906135}
         m_TargetAssemblyTypeName: ApplicationManager, Assembly-CSharp
         m_MethodName: AnimateWindowOpen
@@ -5966,30 +5962,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Clicker Game
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1064703204}
-        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
-        m_MethodName: SaveWallpaperIndex
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1064703205}
-        m_TargetAssemblyTypeName: UpdatePlayerIcon, Assembly-CSharp
-        m_MethodName: SaveIconIndex
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1406647030
@@ -7654,6 +7626,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1064703205}
+        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
+        m_MethodName: SaveIndexs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 771906135}
         m_TargetAssemblyTypeName: ApplicationManager, Assembly-CSharp
         m_MethodName: AnimateWindowOpen
@@ -7664,30 +7648,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Snake
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1064703204}
-        m_TargetAssemblyTypeName: UpdateWallpaper, Assembly-CSharp
-        m_MethodName: SaveWallpaperIndex
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1064703205}
-        m_TargetAssemblyTypeName: UpdatePlayerIcon, Assembly-CSharp
-        m_MethodName: SaveIconIndex
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1989419808
@@ -8208,11 +8168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -8224,7 +8184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
@@ -8233,23 +8193,23 @@ PrefabInstance:
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 771906135}
+      objectReference: {fileID: 632484654}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 632484654}
+      objectReference: {fileID: 1161010172}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1161010172}
+      objectReference: {fileID: 1064703205}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1064703204}
+      objectReference: {fileID: 771906135}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1064703205}
+      objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -8272,19 +8232,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimateWindowOpen
-      objectReference: {fileID: 0}
-    - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SaveTimeData
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OpenTaskTray
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SaveIndexs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SaveWallpaperIndex
+      value: AnimateWindowOpen
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
@@ -8292,19 +8252,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ApplicationManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: LocalTimer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TaskBar, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UpdateWallpaper, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: ApplicationManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
@@ -8312,9 +8272,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: Essay
       objectReference: {fileID: 0}
     - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341713084876997083, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -8336,11 +8304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -8352,7 +8320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
@@ -8361,23 +8329,23 @@ PrefabInstance:
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 771906135}
+      objectReference: {fileID: 632484654}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 632484654}
+      objectReference: {fileID: 1161010172}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1161010172}
+      objectReference: {fileID: 1064703205}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1064703204}
+      objectReference: {fileID: 771906135}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1064703205}
+      objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -8400,19 +8368,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimateWindowOpen
-      objectReference: {fileID: 0}
-    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SaveTimeData
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OpenTaskTray
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SaveIndexs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SaveWallpaperIndex
+      value: AnimateWindowOpen
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
@@ -8420,19 +8388,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ApplicationManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: LocalTimer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TaskBar, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UpdateWallpaper, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: ApplicationManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
@@ -8440,9 +8408,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: Login Screen
       objectReference: {fileID: 0}
     - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536155231733579127, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -8464,11 +8440,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -8480,7 +8456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
@@ -8489,26 +8465,26 @@ PrefabInstance:
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 771906135}
+      objectReference: {fileID: 632484654}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 632484654}
+      objectReference: {fileID: 1161010172}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1161010172}
+      objectReference: {fileID: 1064703205}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1064703204}
+      objectReference: {fileID: 771906135}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1064703205}
+      objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -8520,7 +8496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -8528,19 +8504,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimateWindowOpen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SaveTimeData
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OpenTaskTray
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SaveIndexs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SaveWallpaperIndex
+      value: AnimateWindowOpen
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
@@ -8548,19 +8524,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ApplicationManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: LocalTimer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TaskBar, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UpdateWallpaper, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: ApplicationManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
@@ -8568,7 +8544,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: Snake
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5700318651732296232, guid: 6b93749243b9beb10aca3321a494f166, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
