@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour
     public PlayAudio playAudioScriptForUp3;
     public PlayAudio playAudioScriptForMedal;
 
+    // LOCALTIMER.CS BOILERPLATE CODE (rip locattimer.cs)
+    [SerializeField] float savedTime;            // time stored
+    [SerializeField] float elapsedSaveTime;          // time spent on scene
+
+    DesktopTimerUI timerUI;                     // store timer ui class and use only in desktop
+
     public void Start()
     {
         gameState = SaveSystem.Load(); // Load saved data
@@ -44,6 +50,13 @@ public class GameManager : MonoBehaviour
         autoClickModifier = gameState.clickerUpgrade;
         
         Medal.SetActive(false);
+        if(GameObject.Find("Timer") != null) {  // check if timer object exists
+            timerUI = GameObject.Find("Timer").GetComponent<DesktopTimerUI>();
+        }
+        savedTime = gameState.maxGameTime;
+
+        ClicksTotalText.text = TotalClicks.ToString();
+        AutoModText.text = autoClickModifier.ToString();
     }
     public void AddClicks()
     {
@@ -128,6 +141,11 @@ public class GameManager : MonoBehaviour
         }
         ClicksTotalText.text = TotalClicks.ToString();
         AutoModText.text = autoClickModifier.ToString();
+
+        elapsedSaveTime += Time.deltaTime;
+        CheckIfTimeExceeded();
+
+        if(timerUI != null) timerUI.UpdateTimerUI(savedTime - elapsedSaveTime);
     }
 
     public void SaveGame() {
@@ -135,6 +153,22 @@ public class GameManager : MonoBehaviour
         gameState.totalClickerScore = TotalClicks;
         gameState.clickerUpgrade = autoClickModifier;
         SaveSystem.Save(gameState);
+    }
+
+    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
+    // LOCALTIMER.CS BOILERPLATE METHODS
+    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
+
+    public void SaveTimeData() { // ALWAYS SAVE TIME DATA BEFORE SWITCHING SCENES
+        gameState.maxGameTime = savedTime - elapsedSaveTime;
+        SaveSystem.Save(gameState);
+    }
+
+    private void CheckIfTimeExceeded() { // called whenever elapsedTime + savedTime > time limit
+        if (savedTime - elapsedSaveTime > 0) return;
+        ApplicationManager appMan = GameObject.Find("ApplicationManager").GetComponent<ApplicationManager>();
+
+        appMan.OpenApplication("ENDSCENE"); // end the game
     }
 }
 

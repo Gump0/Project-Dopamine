@@ -47,7 +47,7 @@ public class UpdateWallpaper : MonoBehaviour
     }
 
     public void DecreaseIconIndex() {
-        if(wallpaperIndex != 0) {
+        if(iconIndex != 0) {
             iconIndex--;
         } else {
             iconIndex = icons.Length - 1;

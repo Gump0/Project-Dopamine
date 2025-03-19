@@ -20,6 +20,8 @@ public class SetProfileIcon : MonoBehaviour
     }
 
     void ChangeIcon() { // called by UI element to update sprite
+        if(iconIndex < 0)   //failsafe
+            iconIndex = 0;
         im.sprite = icons[iconIndex];
     }
 }
