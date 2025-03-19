@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532f46e625d0fd940879427121c1c6a4, type: 3}
   m_Name: clickerEnding
   m_EditorClassIdentifier: 
-  message: "Well, turns out doing nothing but playing Gamble Gunner instead of working
-    on a project doesn\u2019t lead to a very good grade. It doesn\u2019t help that
-    your close-minded teacher seems to believe gamble gunner is a common first person
-    despite your numerous attempts to explain how its actually a highly competitive
-    gacha shooter battle royal hybrid, but eventually, following a lengthy argument
-    (and a grade deduction), you're forced to settle your dispute. You\u2019ve gotten
-    a pretty terrible grade. Grade: -D "
+  message: "Well, turns out doing nothing but playing the Shooter game instead of
+    working on the Essay doesn\u2019t lead to a very good grade. It doesn\u2019t
+    help that your close-minded teacher seems to believe the Shooter is a common
+    first-person, despite your numerous attempts to explain how it's actually a highly
+    competitive gacha shooter battle royale hybrid; but eventually, following a lengthy
+    argument (and a grade deduction), you're forced to settle your dispute. You\u2019ve
+    gotten a pretty terrible grade. Grade: -D "

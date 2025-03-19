@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532f46e625d0fd940879427121c1c6a4, type: 3}
   m_Name: failEnding
   m_EditorClassIdentifier: 
-  message: "Well, in terms of enjoyment, you clearly passed with flying colours,
-    in terms of your actual grade you have failed by a wide margin. You\u2019ve failed
-    so badly that you\u2019ve somehow managed to cause your entire class to fail
-    just by association, causing you to be the ire of your entire program until the
-    end of time. Womp Womp."
+  message: "Well, in terms of enjoyment, you clearly passed with flying colors, but
+    in terms of your actual grade, you have failed by a wide margin. You\u2019ve
+    failed so badly that you\u2019ve somehow managed to cause your entire class to
+    fail just by association, causing you to be the ire of your entire program until
+    the end of time. Womp Womp."
