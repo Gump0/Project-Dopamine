@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     // LOCALTIMER.CS BOILERPLATE CODE (rip locattimer.cs)
     [SerializeField] float savedTime;            // time stored
-    [SerializeField] float elapsedSaveTime;          // time spent on scene
+    [SerializeField] float elapsedSaveTime;      // time spent on scene
 
     DesktopTimerUI timerUI;                     // store timer ui class and use only in desktop
 
@@ -49,14 +49,16 @@ public class GameManager : MonoBehaviour
         TotalClicks = gameState.totalClickerScore;
         autoClickModifier = gameState.clickerUpgrade;
         
-        Medal.SetActive(false);
-        if(GameObject.Find("Timer") != null) {  // check if timer object exists
-            timerUI = GameObject.Find("Timer").GetComponent<DesktopTimerUI>();
-        }
-        savedTime = gameState.maxGameTime;
+        Medal.SetActive(gameState.hasMedal);
 
         ClicksTotalText.text = TotalClicks.ToString();
         AutoModText.text = autoClickModifier.ToString();
+
+        if(GameObject.Find("Timer") != null) {  // check if timer object exists
+            timerUI = GameObject.Find("Timer").GetComponent<DesktopTimerUI>();
+            Debug.Log("FOUND TIMER");
+        }
+        savedTime = gameState.maxGameTime;
     }
     public void AddClicks()
     {
@@ -130,8 +132,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        elapsedTime += Time.deltaTime;
+        elapsedSaveTime += Time.deltaTime;
+        CheckIfTimeExceeded();
 
+        if(timerUI != null) timerUI.UpdateTimerUI(savedTime - elapsedSaveTime);
+
+        
         if (elapsedTime < 2f) return;
         elapsedTime = 0;
         if (autoClickModifier == 0) return;
@@ -141,11 +147,6 @@ public class GameManager : MonoBehaviour
         }
         ClicksTotalText.text = TotalClicks.ToString();
         AutoModText.text = autoClickModifier.ToString();
-
-        elapsedSaveTime += Time.deltaTime;
-        CheckIfTimeExceeded();
-
-        if(timerUI != null) timerUI.UpdateTimerUI(savedTime - elapsedSaveTime);
     }
 
     public void SaveGame() {

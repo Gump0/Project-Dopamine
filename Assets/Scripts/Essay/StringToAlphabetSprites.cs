@@ -80,6 +80,11 @@ public class StringToAlphabetSprites : MonoBehaviour
     }
 
     void Update() {
+        elapsedTime += Time.deltaTime;
+        CheckIfTimeExceeded();
+
+        if(timerUI != null) timerUI.UpdateTimerUI(savedTime - elapsedTime);
+
         if(charIndex >= essayCharCount) {
             gameState.essayComplete = true;
             return; // check if end of essay is reached.
@@ -100,11 +105,6 @@ public class StringToAlphabetSprites : MonoBehaviour
                 // IncorrectKeyPress(some index)
             }
         }
-
-        elapsedTime += Time.deltaTime;
-        CheckIfTimeExceeded();
-
-        if(timerUI != null) timerUI.UpdateTimerUI(savedTime - elapsedTime);
     }
 
     void UpdateLetterObjects() { // Called to update every letter in list
