@@ -566,7 +566,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.7325116, g: 0.7895725, b: 0.8773585, a: 0}
+  m_BackGroundColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -990,33 +990,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614fd2af74b53feed8036044c65d9fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  essay: Life is PERPLEXING AND HAS MANY ASPECTS TO IT, SUCH AS MY RESEARCH TOPIC.
-    MY TOPIC IS A TRULY INTERESTING AND INTRIGUING AREA OF DISCUSSION THAT CHALLENGES
-    EVEN THE GREATEST MINDS IN OUR WORLD TO ATTEMPT TO COMPREHEND. THIS TOPIC IS
-    DEEP AND INSIGHTFUL, WITH MANY LAYERS THAT TAKE MANY YEARS OF RESEARCH AND UNDERSTANDING
-    TO DEVELOP A PERSPECTIVE ON THE TOPIC AND ITS CULTURAL CONTEXT WITHIN SOCIETY.
-    IT ENLIGHTENS THE MIND TO PARTAKE IN ENGAGING TOPICS SUCH AS THIS, IT IS KINDA
-    LIKE GAMBLING, I LOVE GAMBLING, IT IS SUCH A GOOD, SKILL BASED WAY TO MAKE MONEY,
-    AND THERE ARE SO MANY TYPES OF GAMBLING, THERE ARE HORSE RACES, SLOTS, CARDS
-    GAME, AND THE CLASSIC SCRATCH TICKETS, PERSONALLY I AM ALSO A BIG FAN OF BETTING
-    BIG MONEY ON FACEBOOK LISTING OF SHIT ASS CARS AND SELLING THEM AT EVEN HIGHER
-    PRICES BUT THAT IS JUST A PERSONAL LITTLE OBSESSION OF MINE. SPEAKING OF RESELLING
-    I HAVE BEEN TRYING TO RESELL A BUNCH OF OLD DVDS RECENTLY, SUCKS CAUSE NO ONE
-    BUYS DVDS NOWADAYS UNLESS THERE CHEAPER THAN DIRT, BACK IN MY DAY WE COULD SELL
-    OLD VHS ON EBAY FOR HUNDREDS AND YOU WOULD AT LEAST HAVE ONE PERSON WILLING TO
-    PAY THE PRICE BUT WITH STREAMING SERVICES TAKING OVER ITS REALLY HURTING MY BUSINESS.
-    I HAVE HAD A LOT OF DIFFERENT TYPES OF EMPLOYMENT OVER THE YEARS, THE AFOREMENTIONED
-    EBAY SELLING, SELLING STOLEN POKEMON CARDS BACK TO CARD STORES, AND DOING AN
-    INTERNSHIP AT A MCDONALDS. IT HAS BEEN A PRETTY DECENT LINE UP OF WORK BUT REALLY
-    SOMETHING MORE CONCRETE WOULD BE PREFERABLE FOR ME AS LIKE AN INTERNSHIP AT DONS
-    IS FINE BUT PREFERABLE I COULD GET SOMETHING THAT ACTUALLY PAYS. MAN I DO LOVE
-    MONEY, LIKE DAMN WHAT A COOL CREATION, YOUR TELLING A THING OUT THERE EXISTS
-    THAT IF I TRADE INTO SOME GUY HE WILL GIVE ME A BEER IF I GIVE THEM THE RIGHT
-    AMOUNT? SIGN ME UP! OH SHOOT THIS IS SUPPOSED TO BE AN ESSAY, UH SO LIKE MY TOPIC
-    IS ROOTED IN DEEP SCIENTIFIC PRINCIPLES, YET DESPITE THAT IS VERY INIMITABLE
-    CONNECTION WITH THE WORLD WE LIVE IN.  SCIENCE IS A VALUABLE TOOL FOR HUMANITY
-    THAT ENABLES US TO EXPAND OUR SURVIVABILITY INTO THE FUTURE AND IS A METHOD OF
-    EXTENDING OUR OWN LIFESPANS.
+  essay: Life is perplexing and has many aspects to it, such as my research topic.
+    My topic is a truly interesting and intriguing area of discussion that challenges
+    even the greatest minds in our world to attempt to comprehend. This topic is
+    deep and insightful, with many layers that take many years of research and understanding
+    to develop a perspective on the topic and its cultural context within society.
+    It enlightens the mind to partake in engaging topics such as this, it is kinda
+    like gambling, I love gambling, it is such a good, skill based way to make money,
+    and there are so many types of gambling, there are horse races, slots, cards
+    game, and the classic scratch tickets, personally I am also a big fan of betting
+    big money on facebook listing of shit ass cars and selling them at even higher
+    prices but that is just a personal little obsession of mine. Speaking of reselling
+    I have been trying to resell a bunch of old dvds recently, sucks cause no one
+    buys dvds nowadays unless there cheaper than dirt, back in my day we could sell
+    old vhs on ebay for hundreds and you would at least have one person willing to
+    pay the price but with streaming services taking over its really hurting my business.
+    I have had a lot of different types of employment over the years, the aforementioned
+    ebay selling, selling stolen Pokemon cards back to card stores, and doing an
+    internship at a McDonald's. It has been a pretty decent line up of work but really
+    something more concrete would be preferable for me as like an internship at dons
+    is fine but preferable I could get something that actually pays. Man I do love
+    money, like damn what a cool creation, your telling a thing out there exists
+    that if I trade into some guy he will give me a beer if I give them the right
+    amount? Sign me up! Oh shoot this is supposed to be an essay, uh so like my topic
+    is rooted in deep scientific principles, yet despite that is very inimitable
+    connected with the world we live in.  Science is a valuable tool for humanity
+    that enables us to expand our survivability into the future and is a method of
+    extending our own lifespans.
   alphabetSprites:
   - {fileID: 1178748381, guid: 05ab75ca516920047ad75bc42fd15c5b, type: 3}
   - {fileID: -831373223, guid: 05ab75ca516920047ad75bc42fd15c5b, type: 3}
