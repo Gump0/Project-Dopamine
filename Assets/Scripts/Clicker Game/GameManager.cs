@@ -132,21 +132,22 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        elapsedTime += Time.deltaTime;
+        // Save data timer stuff
         elapsedSaveTime += Time.deltaTime;
         CheckIfTimeExceeded();
 
         if(timerUI != null) timerUI.UpdateTimerUI(savedTime - elapsedSaveTime);
-
-        
-        if (elapsedTime < 2f) return;
+        // Apply # of clicks
+        ClicksTotalText.text = TotalClicks.ToString();
+        AutoModText.text = autoClickModifier.ToString();
+        // game logic
+        if (elapsedTime < 2f || autoClickModifier == 0) return;
         elapsedTime = 0;
-        if (autoClickModifier == 0) return;
         for (int i = 0; i < autoClickModifier; i++)
         {
             TotalClicks++;
         }
-        ClicksTotalText.text = TotalClicks.ToString();
-        AutoModText.text = autoClickModifier.ToString();
     }
 
     public void SaveGame() {
