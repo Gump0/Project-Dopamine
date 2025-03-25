@@ -37,4 +37,17 @@ public static class SaveSystem
             return new GameState();
         }
     }
+
+    public static void ResetSave() {
+        try {
+            if(File.Exists(savePath)) {
+                File.Delete(savePath);
+            }
+
+            Save(new GameState());
+        }
+        catch (Exception e) {
+            Debug.LogError($"Reset Failed: {e.Message}");
+        }
+    }
 }
