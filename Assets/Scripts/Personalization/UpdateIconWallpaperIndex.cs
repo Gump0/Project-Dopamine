@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpdateWallpaper : MonoBehaviour
 {
     public Sprite[] wallpapers;
     public Sprite[] icons;
     public GameState gameState;
+
+    [SerializeField] Image avatarPreview;
+    [SerializeField] Image wallpaperPreview;
 
     [SerializeField] int wallpaperIndex;
     [SerializeField] int iconIndex;
@@ -44,6 +48,7 @@ public class UpdateWallpaper : MonoBehaviour
         } else {
             iconIndex = 0;
         }
+        UpdateAvatarPreview();
     }
 
     public void DecreaseIconIndex() {
@@ -52,10 +57,20 @@ public class UpdateWallpaper : MonoBehaviour
         } else {
             iconIndex = icons.Length - 1;
         }
+        UpdateAvatarPreview();
     }
 
     void ChangeWallpaper() { // called by UI element to update sprite
         sr.sprite = wallpapers[wallpaperIndex];
+        UpdateWallpaperPreview();
+    }
+
+    void UpdateAvatarPreview() {
+        avatarPreview.sprite = icons[iconIndex];
+    }
+
+    void UpdateWallpaperPreview() {
+        wallpaperPreview.sprite = wallpapers[wallpaperIndex];
     }
 
     void Start() {
@@ -65,5 +80,6 @@ public class UpdateWallpaper : MonoBehaviour
         wallpaperIndex = gameState.playerWallpaperIndex;
         iconIndex = gameState.playerUserImageIndex;
         ChangeWallpaper();
+        UpdateAvatarPreview();
     }
 }
