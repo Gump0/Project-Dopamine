@@ -33,19 +33,6 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!245 &-7517690752273723061
-AudioMixerSnapshotController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: musicOff
-  m_AudioMixer: {fileID: 24100000}
-  m_SnapshotID: 1181efe12271a5843833aca280299155
-  m_FloatValues:
-    7a6f53eb49da4b648883e4cc0aaa6e56: -80
-    2cc038bffb4dea54588c39eab4e2e0e6: 0
-  m_TransitionOverrides: {}
 --- !u!244 &-3108842351314907641
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -72,7 +59,6 @@ AudioMixerController:
   m_Snapshots:
   - {fileID: 24500006}
   - {fileID: -8956938868373355033}
-  - {fileID: -7517690752273723061}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -86,7 +72,6 @@ AudioMixerController:
     name: SFXVolume
   m_AudioMixerGroupViews:
   - guids:
-    - b34bf9f3e42cb694ba717b95b94bd821
     - c071bf2be790762499c33b507de62d87
     - c0a69494b853d704cb7681ae4c20171f
     name: View
