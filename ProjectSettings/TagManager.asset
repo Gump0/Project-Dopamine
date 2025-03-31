@@ -14,6 +14,7 @@ TagManager:
   - Food
   - AppClose
   - DesktopIcon
+  - MusicManager
   layers:
   - Default
   - TransparentFX
