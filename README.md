@@ -4,7 +4,7 @@
 
 **Project Dopamine** is an immersive sandbox game set inside a nostalgic computer interface, where curiosity leads you deep into a world of mini-games, hidden corners, and interactive experiences. But there's more beneath the surface...
 
-> Will you break free, or get lost in the endless scroll of the digital rabbit hole?
+> Will you finish your essay like a good student, or get lost in the endless simulation of the digital world?
 
 ---
 
@@ -33,7 +33,8 @@ Explore at your own pace. Interact with strange apps. Try out games within the g
 ## 📥 Play Now
 
 👉 **[Play Project Dopamine on itch.io](https://alisaneei.itch.io/project-dopamine)**  
-No install required – runs right in your browser!
+
+Currently supports 64-bit Windows and 64-bit Linux systems!
 
 
 ## 💬 Feedback
